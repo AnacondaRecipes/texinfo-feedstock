@@ -15,6 +15,14 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - autoconf
+    - automake
+    - libtool
+    - help2man
+  host:
+    - ncurses   # [osx]
+    - libiconv  # [osx]
     - perl
   run:
     - perl
@@ -22,8 +30,6 @@ requirements:
 test:
   commands:
     - makeinfo -h
-    #- conda inspect linkages -p $PREFIX texinfo  # [not win]
-    #- conda inspect objects -p $PREFIX texinfo  # [osx]
 
 about:
   home: http://www.gnu.org/software/texinfo/
