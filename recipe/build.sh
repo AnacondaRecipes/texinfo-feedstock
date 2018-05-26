@@ -2,7 +2,11 @@
 
 autoreconf -vfi
 
-./configure --prefix=${PREFIX}
+# We do this to prevent configure finding perl in the host prefix and
+# using it in shebangs. /usr/bin/env <thing> is always the right thing
+# for shebangs (and not just for us, everywhere else too).
+PERL="/usr/bin/env perl" \
+  ./configure --prefix=${PREFIX}
 
 make -j${CPU_COUNT} ${VERBOSE_AT}
 if [[ ${target_platform} != osx-64 ]]; then

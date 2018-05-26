@@ -20,6 +20,8 @@ requirements:
     - automake
     - libtool
     - help2man
+    - gettext
+    - gawk
   host:
     - ncurses   # [osx]
     - libiconv  # [osx]
