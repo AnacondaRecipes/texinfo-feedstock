@@ -22,8 +22,9 @@ requirements:
     - help2man
     - gettext
     - gawk
+    - make
   host:
-    - ncurses   # [osx]
+    - ncurses
     - libiconv  # [osx]
     - perl
   run:
