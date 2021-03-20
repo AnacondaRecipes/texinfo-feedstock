@@ -20,7 +20,7 @@ requirements:
     - automake
     - libtool
     - help2man
-    - gettext
+    - gettext # [not linux]
     - gawk
     - make
   host:
