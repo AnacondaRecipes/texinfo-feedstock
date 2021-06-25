@@ -37,7 +37,11 @@ test:
 about:
   home: http://www.gnu.org/software/texinfo/
   license: GPL-2.0 and GPL-3.0
+  license_family: GPL
+  license_file: COPYING
   summary: 'The GNU Documentation System.'
+  dev_url: https://git.savannah.gnu.org/cgit/texinfo.git
+  doc_url: https://www.gnu.org/software/texinfo/manual/texinfo/texinfo.pdf
 
 extra:
   recipe-maintainers:
